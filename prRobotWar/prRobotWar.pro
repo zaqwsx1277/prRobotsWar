@@ -26,12 +26,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    TRobot.cpp
+    TRobot.cpp \
+    TRobotType1.cpp \
+    TRobotType2.cpp
 
 HEADERS += \
         mainwindow.hpp \
     TRobot.hpp \
-    TCommon.hpp
+    TCommon.hpp \
+    TRobotType1.hpp \
+    TRobotType2.hpp
 
 FORMS += \
         mainwindow.ui

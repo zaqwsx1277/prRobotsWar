@@ -1,6 +1,12 @@
 #include "TRobot.hpp"
 
+#include "TRobotType1.hpp"
+#include "TRobotType2.hpp"
+
 namespace robot {
+
+//class TRobotType1 ;
+//class TRobotType2 ;
 
 //----------------------------------------------------------
 /*!
@@ -30,11 +36,11 @@ std::shared_ptr <TRobot> create (typeRobot inTypeRobot)
 
     switch (inTypeRobot) {
       case trOne:
-
+        retVal = std::make_shared <robot::TRobotType1> () ;
       break;
 
       case trTwo:
-
+        retVal = std::make_shared <robot::TRobotType2> () ;
       break;
 
       default:
