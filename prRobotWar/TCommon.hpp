@@ -7,6 +7,7 @@
  */
 
 #include <mutex>
+#include <atomic>
 #include <unordered_set>
 #include <assert.h>
 
@@ -46,10 +47,10 @@ struct objectCheckEqual
 //-------------------------------------------------------------------------------
 static std::mutex stMutexModelRefresh ;         ///< mutex для блокировки доступа к модели при обновлении
 static std::mutex stMutexData ;                 ///< mutex для блокировки доступа к контейнеру с данными
-static std::mutex stMutexId ;                   ///< mutex для блокировки доступа к контейнеру с данными
 
 const uint32_t stThreadsMax {100} ;             ///< Максимальное количество потоков для создаваемых объектов
-static uint64_t stId ;                          ///< Уникальный идентификатор обекта. При превышении разрядной сетки полетим по exception
+static std::mutex stMutexId ;                   ///< mutex для блокировки доступа к контейнеру с данными
+ static std::atomic <uint64_t> stId ;           ///< Уникальный идентификатор обекта. При превышении разрядной сетки полетим по exception
 
 static std::unordered_set<robot::TRobot> stData; ///< Конетейнер с данными по объектам
 }
