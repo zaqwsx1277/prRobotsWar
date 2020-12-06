@@ -33,7 +33,7 @@ std::shared_ptr <TRobot> create (typeRobot inTypeRobot)
 
       break;
 
-      case trOne:
+      case trTwo:
 
       break;
 

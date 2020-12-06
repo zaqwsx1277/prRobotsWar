@@ -7,7 +7,7 @@
 
 namespace robot {
 
-enum typeRobot { trOne, tpTwo } ;
+enum typeRobot { trOne, trTwo } ;
 
 /*!
  * \brief The TRobot class Базовый класс для создания разных моделей объектов
@@ -17,13 +17,15 @@ class TRobot
 {
 private :
     bool mIsDeleted {false} ;       ///< Признак удаления объекта. Необходим для удаления потока в котором этот объект существует
+    uint64_t mId { 0 } ;            ///< Уникальный идентификатор объекта
 
 public:
-    virtual TRobot() = default ;
+    TRobot() = default ;
     virtual ~TRobot () = default ;
 
     bool kill () ;                  // Удаление объекта
-    std::shared_ptr <TRobot> create (typeRobot) ;       // Метод создания объекта для патерна Фабрика
+    uint64_t getId () { return mId ;} ///<  Получение уникального идентификатора объекта
+    std::shared_ptr <TRobot> create (typeRobot) ; // Метод создания объекта для патерна Фабрика
 };
 
 }
