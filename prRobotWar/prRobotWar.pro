@@ -31,7 +31,7 @@ SOURCES += \
 HEADERS += \
         mainwindow.hpp \
     TRobot.hpp \
-    tcommon.hpp
+    TCommon.hpp
 
 FORMS += \
         mainwindow.ui
