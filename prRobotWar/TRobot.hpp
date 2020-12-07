@@ -25,7 +25,7 @@ public:
 
     bool kill () ;                  // Удаление объекта
     uint64_t getId () { return mId ;} ///<  Получение уникального идентификатора объекта
-    std::shared_ptr <TRobot> create (typeRobot) ; // Метод создания объекта для патерна Фабрика
+    static std::shared_ptr <TRobot> create (typeRobot) ; // Метод создания объекта для патерна Фабрика
 };
 
 }
