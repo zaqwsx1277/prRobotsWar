@@ -5,9 +5,6 @@
 
 namespace robot {
 
-//class TRobotType1 ;
-//class TRobotType2 ;
-
 //----------------------------------------------------------
 /*!
  * \brief TRobot::kill Удаление робота.
