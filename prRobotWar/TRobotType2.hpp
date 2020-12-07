@@ -3,11 +3,9 @@
 
 #include <QObject>
 
-//#include "TRobot.hpp"
+#include "TRobot.hpp"
 
 namespace robot {
-
-class TRobot ;
 
 class TRobotType2 : public TRobot
 {
